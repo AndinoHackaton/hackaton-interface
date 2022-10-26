@@ -1,4 +1,4 @@
-const platziPunksArtifacts = {
+const Artifacts = {
   address: {
     4: ''//contrato desplegado,
   },
@@ -7,4 +7,4 @@ const platziPunksArtifacts = {
   ],
 }
 
-export default platziPunksArtifacts
+export default Artifacts
