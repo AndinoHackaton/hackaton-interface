@@ -76,14 +76,13 @@ const WalletData = () => {
         </Tag>
       ) : (
         <Button
-          variant={'solid'}
-          colorScheme={'green'}
-          size={'sm'}
+        p={4} m={4} borderRadius='md' borderWidth='md' rounded='md'
+        bgGradient='linear(to-r, pink.500, green.300)' color='white'          
           leftIcon={<AddIcon />}
           onClick={connect}
           disabled={isUnsupportedChain}
         >
-          {isUnsupportedChain ? 'Red no soportada' : 'Conectar wallet'}
+          {isUnsupportedChain ? 'Red no soportada' : 'Conectar Wallet'}
         </Button>
       )}
     </Flex>
