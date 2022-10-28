@@ -5,6 +5,7 @@ import { Home } from './views/Home'
 import MainLayout from './layouts/main'
 import { Login } from './views/Login'
 import { Pay } from './views/Pay'
+import { Prueba } from './views/Prueba'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/login" default exact element={<Login />} />
           <Route path="/home" exact element={<Home />} />
           <Route path="/pay" exact element={<Pay />} />
+          <Route path="/prueba" exact element={<Prueba />} />
         </Routes>
       </MainLayout>
     </Fragment>
