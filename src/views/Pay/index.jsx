@@ -4,7 +4,7 @@ import { BiDollarCircle, BiArrowBack } from "react-icons/bi";
 import { AiOutlineArrowRight} from "react-icons/ai";
 import { IoReturnDownBack } from "react-icons/io5";
 
-import './funciones'
+
 import './Tercero.css'
 import './Cuarto.css'
 import './Quinto.css'
