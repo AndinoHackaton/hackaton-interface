@@ -15,11 +15,10 @@ function App() {
     <Fragment>
       <MainLayout>
         <Routes>
-          <Route path="/login" default exact element={<Login />} />
+          <Route path="/" default exact element={<Login />} />
           <Route path="/home" exact element={<Home />} />
           <Route path="/GenerarQr" exact element={<GenerarQr />} />
           <Route path="/pay" exact element={<Pay />} />
-          <Route path="/prueba" exact element={<Prueba />} />
         </Routes>
       </MainLayout>
     </Fragment>

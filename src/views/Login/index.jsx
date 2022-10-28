@@ -19,16 +19,11 @@ export const Login=()=>{
     }
   },[active, navigate])
     return (
-      <Container className="Padre_1">
-        <Container className="Ventana_1">
         <SimpleGrid columns={1} spacingX='40px' spacingY='20px'>
           <Carousel />
-          <WalletData/>
-          <Center><Spinner color='red.500' /></Center>
+          
+          <Center><WalletData/></Center>
 
         </SimpleGrid>
-
-      </Container>
-      </Container>
     );
 }
