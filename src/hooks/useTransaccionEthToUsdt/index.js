@@ -1,15 +1,17 @@
 import { useToast } from "@chakra-ui/react"
 import { useWeb3React } from "@web3-react/core"
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { useSton } from "../useSton"
 
 export const useTransaccionEthToUsdt = ()=>{
     
+    const [balance, setBalance] = useState(0)
+
     const [isTransfering, setIsTransfering] = useState(false)
     const toast = useToast()
   
     const { active, account } = useWeb3React()
-    const ston = useSton()
+    const {ston, setStonAddress} = useSton()
   
     const transfer = useCallback(() => {
       if (ston) {
@@ -18,7 +20,7 @@ export const useTransaccionEthToUsdt = ()=>{
           .contribute()
           .send({
             from: account,
-            value: 20000000000000000,
+            value: 200000,
             gasLimit: 2100000
           })
           .on('transactionHash', (txHash) => {
@@ -47,7 +49,18 @@ export const useTransaccionEthToUsdt = ()=>{
           })
       }
     }, [ston, toast, account])
+    
+    const getBalance = useCallback(async () => {
+      if (ston) {
+        const currentBalance = await ston.methods.currentBalance().call()
+        setBalance(currentBalance)
+      }
+    }, [ston])
+
+    useEffect(()=>{
+        getBalance();
+    }, [ston, getBalance])
 
 
-    return {active, isTransfering, transfer, account}
+    return {active, isTransfering, transfer, account, setStonAddress, balance}
 }

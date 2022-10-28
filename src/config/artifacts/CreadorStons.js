@@ -1,6 +1,6 @@
 const Artifacts = {
   address: {
-    97: '0x75275A7466BFBafC5A46319aA27566D1907f895C'//contrato desplegado,
+    97: '0x853bE9e2AA917c301ad92eF94331B3d74d9F1dd4'//contrato desplegado,
   },
   abi: [
 	{
