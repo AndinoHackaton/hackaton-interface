@@ -7,7 +7,6 @@ export const useSton = () => {
   const [stonAddress, setStonAddress]  = useState("")
   const { active, library } = useWeb3React()
   const ston = useMemo(() => {
-    console.log("stonAddress",stonAddress)
 
     if (active) return new library.eth.Contract(abi, stonAddress)
   }, [active, library?.eth?.Contract, stonAddress])

@@ -7,33 +7,44 @@ import {
   useColorModeValue,
   Stack,
   Heading,
+  Button,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NavLink from "./nav-link";
 import Footer from "./footer";
 import WalletData from "../../components/wallet-data";
 
-const Links = [
-  {
-    name: "Login",
-    to: "/login",
-  },
-  {
-    name: "Home",
-    to: "/home",
-  },
-  {
-    name: "Crear qr",
-    to: "/pay",
-  },
-];
+import "./index.css"
+import { useWeb3React } from "@web3-react/core";
+
+// const Links = [
+//   {
+//     name: "Login",
+//     to: "/login",
+//   },
+//   {
+//     name: "Home",
+//     to: "/home",
+//   },
+//   {
+//     name: "Crear qr",
+//     to: "/pay",
+//   },
+// ];
 
 const MainLayout = ({ children }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  const { deactivate } =
+    useWeb3React()
+    const disconnect = () => {
+      deactivate()
+      localStorage.removeItem('previouslyConnected')
+    }
 
   return (
-    <Flex minH="100vh" direction="column">
-      <Box
+    <Flex minH="100vh" direction="column" className="layout__container">
+      <Button onClick={disconnect}>salir</Button>
+      {/* <Box
         mx="auto"
         maxW={"7xl"}
         width="100%"
@@ -91,7 +102,8 @@ const MainLayout = ({ children }) => {
             </Stack>
           </Box>
         ) : null}
-      </Box>
+      </Box> */}
+      
       <Box mx="auto" flex={1} p={4} maxW={"7xl"} width="100%">
         {children}
       </Box>
