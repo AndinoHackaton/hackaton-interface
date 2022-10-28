@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Primero,.Segundo,.Tercero,.Cuarto,.Quinto{
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  height: 100vh;
+}
+/*
+.Primero{
+  background-color: aqua;
+  height: 100vh;
+}
+.Segundo{
+  background-color: palevioletred;
+  height: 100vh;
+}
+.Tercero{
+  background-image: radial-gradient(circle at 0% 0%, #b4e664 0, #9fdf5e 16.67%, #87d758 33.33%, #6acc50 50%, #48c14a 66.67%, #10b847 83.33%, #00b147 100%);
+  height: 100vh;
+}
+.Cuarto{
+  background-image: radial-gradient(circle at 0% 0%, #8771e6 0, #5050cc 50%, #0033b2 100%);;
+  height: 100vh;
+}
+.Quinto{
+  background-color: violet;
+  height: 100vh;
+}
+
+*/
