@@ -1,0 +1,24 @@
+
+.icon{
+    height: 40px;
+    width: 40px;
+}
+.Padre_3{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    height: auto;
+}
+
+.Ventana_3{
+    
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    padding-top:10px ;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.125);     
+}
