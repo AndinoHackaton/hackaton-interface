@@ -1,20 +1,29 @@
-import React,{Component} from "react";
-import App from "../../App";
+import React,{ useEffect } from "react";
 import WalletData from "../../components/wallet-data";
 
 import './Primero.css'
 
-import { Box, Button , Center, Container, Spacer, Spinner,SimpleGrid} from '@chakra-ui/react'
+import {  Center, Container, Spinner,SimpleGrid} from '@chakra-ui/react'
+import Carousel from "../../components/carrusel";
+import { useWeb3React } from "@web3-react/core";
+import { useNavigate } from "react-router-dom";
 
 
 export const Login=()=>{
+  let navigate = useNavigate();
+    // web3-react
+  const { active } = useWeb3React()
+  useEffect(()=>{
+    if(active){
+      navigate("/home");
+    }
+  },[active, navigate])
     return (
       <Container className="Padre_1">
-        <Container className="Ventana_1">        
+        <Container className="Ventana_1">
         <SimpleGrid columns={1} spacingX='40px' spacingY='20px'>
-          
+          <Carousel />
           <WalletData/>
-          
           <Center><Spinner color='red.500' /></Center>
 
         </SimpleGrid>

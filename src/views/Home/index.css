@@ -3,13 +3,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-.Padre_2{
+.home__container{
     display: flex;
     flex-direction: column;
     padding-top: 10vh;
     height: 85vh;
 }
-.Ventana_2{
+.prices__container{
         width: auto;
         height: 30vh;
         max-width: 90vw;
@@ -20,8 +20,26 @@
         align-items: center;
         flex-direction: column;
         justify-content: space-evenly;
-        background: rgba(255, 255, 255, 0.375);
+        background: rgba(255, 255, 255, 0.205);
         box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
         border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.125);     
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        padding: 30px;   
+}
+
+.prices__text{
+    background: rgba(255, 255, 255, 0.205);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between
+}
+.prices__token{
+    font-weight: 600;
+}
+.prices__balance{
+    width: 50%;
+    text-align: end;
 }
