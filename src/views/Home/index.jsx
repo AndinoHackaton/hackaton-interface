@@ -1,34 +1,32 @@
-import { Stack, Flex, Badge } from '@chakra-ui/react'
-import { useWeb3React } from '@web3-react/core'
-import useTruncatedAddress from '../../hooks/useTruncatedAddress'
+import { Box, Container,Flex,Button, Center,Text,Input } from "@chakra-ui/react";
+import React,{Component} from "react";
+import {useNavigate} from 'react-router-dom';
+
+
+import './Segundo.css'
 
 const Home = () => {
-  const { active, account } = useWeb3React()
-  const truncatedAddress = useTruncatedAddress(account)
-
-  return (
-    <Stack
-      align={'center'}
-      spacing={{ base: 8, md: 10 }}
-      py={{ base: 20, md: 28 }}
-      direction={{ base: 'column-reverse', md: 'row' }}
-    >
-      {active ? (
-        <>
-          <Flex mt={2}>
-            <Badge ml={2}>
-              Address:
-              <Badge ml={1} colorScheme="green">
-                {truncatedAddress}
-              </Badge>
-            </Badge>
-          </Flex>
-        </>
-      ) : (
-        <Badge mt={2}>Wallet desconectado</Badge>
-      )}
-    </Stack>
-  )
+  const navigate = useNavigate();
+    return (
+      <Container className="Padre_2">
+      <Flex direction={'column'} gap={'15px'} justify={'space-evenly'}>
+        <Box className="Ventana_2" ml={2} mr={2} borderRadius={'10px'} >
+        <Center>
+          <Text>USDT</Text>
+          <Input isReadOnly placeholder='Basic usage' />
+        </Center>
+        <Center>
+          <Text>BUSD</Text>
+          <Input isReadOnly placeholder='Basic usage' />
+        </Center>
+        </Box>
+        <Box ml={2} mr={2} borderRadius={'10px'} >
+          <Center><Button onClick={() => navigate(-1)} colorScheme='blue'>Button</Button></Center>
+        </Box>
+        <Box className="Ventana_2" ml={2} mr={2} borderRadius={'10px'} >Thisbox3</Box>
+      </Flex>
+      </Container>
+    );
 }
 
 export { Home }

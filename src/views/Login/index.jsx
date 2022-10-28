@@ -1,8 +1,24 @@
-import React from 'react'
+import React,{Component} from "react";
+import App from "../../App";
 
-export const Login = () => {
-  // TODO:: loading
-  //TODO: Redireccion de pantalla luego de cargar
-  // TODO: MOstrar error por un toast
-  return <div>Buton login</div>
+import './Primero.css'
+
+import { Box, Button , Center, Container, Spacer, Spinner,SimpleGrid} from '@chakra-ui/react'
+
+
+export const Login=()=>{
+    return (
+      <Container className="Padre_1">
+        <Container className="Ventana_1">        
+        <SimpleGrid columns={1} spacingX='40px' spacingY='20px'>
+          
+          <Button colorScheme='blue'>Button</Button>
+          
+          <Center><Spinner color='red.500' /></Center>
+
+        </SimpleGrid>
+
+      </Container>
+      </Container>
+    );
 }

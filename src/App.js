@@ -7,6 +7,8 @@ import { Login } from './views/Login'
 import { Pay } from './views/Pay'
 import { Prueba } from './views/Prueba'
 
+import './App.css'
+
 function App() {
   return (
     <Fragment>
