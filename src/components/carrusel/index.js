@@ -40,7 +40,7 @@ export default function CaptionCarousel() {
   // This can be static or loaded from a server
   const cards = [
     {
-      title: 'Sesarrollar tu negocio con nosotros de lo demas nos encargamos Nosotros.',
+      title: 'Desarrollar tu negocio con nosotros de lo demás nos encargamos. Nosotros!".',
     },
     {
       title: 'STon'},
