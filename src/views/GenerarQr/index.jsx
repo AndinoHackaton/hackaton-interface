@@ -4,11 +4,13 @@ import { BiDollarCircle, BiArrowBack } from "react-icons/bi";
 import { AiOutlineArrowRight} from "react-icons/ai";
 
 import NavLink from '../../layouts/main/nav-link'
-
+import Stepper from '../../components/stepper'
 import {
   IoAnalyticsSharp,
   IoLogoBitcoin,
 } from 'react-icons/io5';
+
+import { Step, Steps, useSteps } from 'chakra-ui-steps';
 
 // import './funciones'
 import './index.css'
@@ -20,6 +22,7 @@ import { useWeb3React } from "@web3-react/core";
 
 import QRCode from "qrcode"
 import { useCreateStonProyect } from "../../hooks/useCreateStonProyect";
+
 
 const Feature = ({ text, icon, iconBg, onClick }) => {
   return (
@@ -49,12 +52,16 @@ const Feature = ({ text, icon, iconBg, onClick }) => {
 //view_one boton con id continuar y deshabilitado eliminar
 //su funcion esta comentada en funciones.js
 export const GenerarQr = () => {
+  const { nextStep, prevStep, setStep, reset, activeStep } = useSteps({
+    initialStep: 0,
+  });
+
   let navigate = useNavigate();
     // web3-react
   const { active } = useWeb3React()
   useEffect(()=>{
     if(!active){
-      navigate("/login");
+      navigate("/");
     }
   },[active, navigate])
 
@@ -67,7 +74,7 @@ export const GenerarQr = () => {
 
   const handlerClickStable = (selectedStable)=>{
     setStable(selectedStable)
-    setStatePay(3)
+    nextStep()
   }
 
   useEffect(()=>{
@@ -83,8 +90,6 @@ export const GenerarQr = () => {
       <NavLink to="/home">
         <Button mb={'5'} w={'auto'} leftIcon={<BiArrowBack />} colorScheme='teal' variant='solid'>Regresar</Button>
       </NavLink>
-        <h1>Monto a Pagar</h1>
-        <p>Dolares a Recibir:</p>
         <Flex justify={'center'} pt={'10'} pb={'10'}>
           <BiDollarCircle className="icon" />
           <NumberInput 
@@ -99,17 +104,16 @@ export const GenerarQr = () => {
             <NumberInputStepper>
             </NumberInputStepper>
           </NumberInput></Flex>
-        <Button id="continuar" isDisabled={amount<5} rightIcon={<AiOutlineArrowRight/>} colorScheme='blue' onClick={() => setStatePay(2)}>Aceptar</Button>
+        <Button id="continuar" isDisabled={amount<5} rightIcon={<AiOutlineArrowRight/>} colorScheme='blue' onClick={nextStep}>Aceptar</Button>
       </Container>
     </Container>
   );
   const view__two = (
     <Container className="Padre_4">
       <Container className="Ventana_4" p={10} centerContent >
-        <h1><BiArrowBack />RECORDATORIO HACER EL BOTON DE REGRESO Y CON EL TITULO DE ARRIBA</h1>
-        <h1>Elije una criptomoneda</h1>
-        <p>Selecciona la criptomoneda que vas a recibir a cambio</p>
-
+        <div>
+          <Button onClick={prevStep}><BiArrowBack /></Button>
+        </div>
         <Stack
             className="view_two__input-container"
             spacing={4}
@@ -138,9 +142,7 @@ export const GenerarQr = () => {
   );
   const view_three = (
     <Container className="Padre_5">
-
       <Container className="Ventana_5" p={10} centerContent >
-        <h1><BiArrowBack />RECORDATORIO HACER EL BOTON DE REGRESO Y CON EL TITULO DE ARRIBA</h1>
         <Center>
           <Image
             h='150px'
@@ -166,12 +168,22 @@ export const GenerarQr = () => {
       </Container>
     </Container>
   );
+  const steps = [
+    { label: "Dolares a Recibir:", children: view_one },
+    { label: "Elije la moneda estable", children: view__two },
+    { label: "Muestra el QR para que te pagen", children: view_three }]
 
-  if (statePay === 1) {
-    return view_one
-  } else if (statePay === 2) {
-    return view__two
-  } else {
-    return view_three
-  }
+  return (<>
+      <Steps orientation="horizontal"  activeStep={activeStep}>
+        {steps.map(({ label,children }, index) => (
+          <Step label={label} key={label}>
+            {children}
+          </Step>
+        ))}
+      </Steps>
+  )
+
+</>)
+
+  
 };

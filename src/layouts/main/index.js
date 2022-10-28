@@ -8,12 +8,14 @@ import {
   Stack,
   Heading,
   Button,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NavLink from "./nav-link";
-import Footer from "./footer";
 import WalletData from "../../components/wallet-data";
 
+
+import Logo from "../../assets/img/logo.png"
 import "./index.css"
 import { useWeb3React } from "@web3-react/core";
 
@@ -43,7 +45,9 @@ const MainLayout = ({ children }) => {
 
   return (
     <Flex minH="100vh" direction="column" className="layout__container">
-      <Button onClick={disconnect}>salir</Button>
+      <Button  onClick={disconnect}>
+        <Image src={Logo} />
+      </Button>
       {/* <Box
         mx="auto"
         maxW={"7xl"}
@@ -107,7 +111,6 @@ const MainLayout = ({ children }) => {
       <Box mx="auto" flex={1} p={4} maxW={"7xl"} width="100%">
         {children}
       </Box>
-      <Footer />
     </Flex>
   );
 };
