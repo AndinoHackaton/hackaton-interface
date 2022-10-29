@@ -25,7 +25,7 @@ export const Pay = () => {
               <Text className="prices__token">Pagar a través de STon </Text>
               <Text className="prices__token">Eth:{amount}</Text>
         </Box>
-        <Button disabled={isTransfering} onClick={transfer}>STonear</Button>
+        <Button disabled={isTransfering} colorScheme='blue' onClick={transfer}>STonear</Button>
       </Flex>
       </Container>
     );
