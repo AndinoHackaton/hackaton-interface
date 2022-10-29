@@ -1,6 +1,6 @@
 # **STON** is [STON](https://ston.vercel.app/).
 ![STON](hackaton-interface/src/assets/img/logo.png)
-
+[![STON](hackaton-interface/src/assets/img/logo.png)]
 ## ANTECEDENTES 
 
 Empecemos con una situación, un restaurante que acepta pagos con criptomonedas es genial, pero no es tan genial que cuando vas a pagar la cuenta el total de tu pedido sea mayor al que en realidad pensabas que era con los precios en carta, pues el restaurante al precio total le aumenta un extra cuando pagas con criptomonedas con la justificación de que el mercado de criptomonedas es muy volátil.
