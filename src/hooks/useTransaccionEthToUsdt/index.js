@@ -6,21 +6,24 @@ import { useSton } from "../useSton"
 export const useTransaccionEthToUsdt = ()=>{
     
     const [balance, setBalance] = useState(0)
+    const [amountSton, setAmountSton] = useState(0)
 
     const [isTransfering, setIsTransfering] = useState(false)
     const toast = useToast()
   
     const { active, account } = useWeb3React()
     const {ston, setStonAddress} = useSton()
-  
-    const transfer = useCallback(() => {
+
+    const transfer = useCallback(async () => {
       if (ston) {
+        const data = await fetch('http://example.com/movies.json');
+        const priceEth = data.filter(({id})=> id==="ethereum")[0].current_price
         setIsTransfering(true)
         ston.methods
           .contribute()
           .send({
             from: account,
-            value: 200000,
+            value: (amountSton/priceEth)*1000000*1000000*1000000,
             gasLimit: 2100000
           })
           .on('transactionHash', (txHash) => {
@@ -48,7 +51,7 @@ export const useTransaccionEthToUsdt = ()=>{
             })
           })
       }
-    }, [ston, toast, account])
+    }, [ston, toast, account, amountSton])
     
     const getBalance = useCallback(async () => {
       if (ston) {
@@ -62,5 +65,5 @@ export const useTransaccionEthToUsdt = ()=>{
     }, [ston, getBalance])
 
 
-    return {active, isTransfering, transfer, account, setStonAddress, balance}
+    return {active, isTransfering, transfer, account, setStonAddress, balance, setAmountSton}
 }
