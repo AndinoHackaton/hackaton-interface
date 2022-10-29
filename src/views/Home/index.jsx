@@ -9,10 +9,11 @@ import { useCreateStonProyect } from '../../hooks/useCreateStonProyect';
 import { useSton } from "../../hooks/useSton";
 import useTruncatedAddress from "../../hooks/useTruncatedAddress";
 
-import daiPng from "../../assets/img/dai.png"
+import binancePng from "../../assets/img/binance.png"
 import etherPng from "../../assets/img/tether.png"
 import bitcoinPng from "../../assets/img/bitcoin.png"
 import dogePng from "../../assets/img/doge.png"
+import bnbPng from "../../assets/img/bnb.png"
 import ethereumPng from "../../assets/img/ethereum.png"
 
 const Feature = ({ text, icon, iconBg }) => {
@@ -88,9 +89,9 @@ const Home = () => {
       <Flex direction={'column'} gap={'15px'} justify={'space-evenly'}>
         <Box className="prices__container" ml={2} mr={2} borderRadius={'10px'} >
           <Feature
-              icon={<Image src={daiPng}/>}
+              icon={<Image src={binancePng}/>}
               iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={`DAI - 00`}
+              text={`BUSD - 00`}
             />
             <Feature
               icon={<Image src={etherPng}/>}
@@ -126,9 +127,9 @@ const Home = () => {
               text={'ETH'}
             />
             <Feature
-              icon={<Image src={dogePng}/>}
+              icon={<Image src={bnbPng}/>}
               iconBg={useColorModeValue('green.100', 'green.900')}
-              text={'DOG'}
+              text={'BNB'}
             />
           </Stack>
         </Box>
