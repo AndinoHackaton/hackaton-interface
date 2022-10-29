@@ -24,8 +24,8 @@ export const Pay = () => {
       <Flex direction={'column'} gap={'15px'} justify={'space-evenly'}>
         <Box  ml={2} mr={2} borderRadius={'10px'} >
               <Text className="prices__token">Pagar a través de STon </Text>
-              <Text className="prices__token">Eth: {(amountEthSton/1000000/1000000/1000000).toFixed(6)}</Text>
-              <Text className="prices__token">USDT: {amount}</Text>
+              <Text className="prices__token">TBNB: {(amountEthSton/1000000/1000000/1000000).toFixed(6)}</Text>
+              <Text className="prices__token">BUSD: {amount}</Text>
         </Box>
         <Button disabled={isTransfering} colorScheme='blue' onClick={transfer}>STonear</Button>
       </Flex>
