@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# PITCH
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Empecemos con una situación, un restaurante que acepta pagos con criptomonedas es genial, pero no es tan genial que cuando vas a pagar la cuenta el total de tu pedido sea mayor al que en realidad pensabas que era con los precios en carta, pues el restaurante al precio total le aumenta un extra cuando pagas con criptomonedas con la justificación de que el mercado de criptomonedas es muy volátil.
+
+La alta volatilidad es una de las razones más comunes para no aceptar pagos con criptomonedas, pues nadie quiere que sus activos se devaluen en cuestión de días. Por otro lado, existen criptomonedas que mantienen un precio estable con el dólar estadounidense y son conocidas como stablecoin.
+
+Para lograr la masificación en las transacciones con criptomonedas quitando de en medio el factor "volatilidad" hemos creado [STON](https://ston.vercel.app/): una aplicación que simplifica el tipo de cambio de criptomonedas a establecoins.
 
 ## Available Scripts
 
