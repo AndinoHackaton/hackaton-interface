@@ -22,11 +22,11 @@ Por otro lado, hoy en el mundo, hay casi 30 mil establecimientos comerciales que
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Como parte necesaria de nuestra estrategia hemos considerado emitir una cantidad total de 500 millones de tokens en un plazo aproximado de 4 años, la distribución inicial de ston será un 30% del suministro total. Nuestros clientes y usuarios se verán beneficiados con nuestros tokens al recibir descuentos de consumo en negocios afiliados, además que al tener un protocolo de quema de tokens y un sistema deflacionario, nuestros tokens actuaran como una inversión.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Somos un equipo multidisciplinario con conocimientos en desarrollo, diseño, marketing, economía e industrial, que cree que mientras el mundo sigue avanzando, el refugio en establecoins y la facilidad con la que puedan obtenerse será clave para la masificación de transacciones con blockchain.
+
+Con STon en unos pocos años ya podrías estar pagando tus compras y servicios con criptomonedas, tan simple como escanear un QR, definir el monto de pago y enviar. ¿Y tú te unes a **STON**?
 
 ### `npm test`
 
