@@ -1,5 +1,5 @@
 # **STON** is [STON](https://ston.vercel.app/).
-![STON](./src/assets/img/logo.png")
+![STON](hackaton-interface/src/assets/img/logo.png)
 
 ## ANTECEDENTES 
 
