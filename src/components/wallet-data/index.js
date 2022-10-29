@@ -77,7 +77,7 @@ const WalletData = () => {
       ) : (
         <Button
         p={4} m={4} borderRadius='md' borderWidth='md' rounded='md'
-        bgGradient='linear(to-r, pink.500, green.300)' color='white'          
+        bgGradient='linear(to-r, orange.300, pink.500)' color='white'          
           leftIcon={<AddIcon />}
           onClick={connect}
           disabled={isUnsupportedChain}
