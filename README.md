@@ -18,7 +18,7 @@ Lo que diferencia a nuestra aplicación de otras existentes en la actualidad es 
 
 Al segundo trimestre de este año el número de usuarios de wallets ha aumentado en un 30% a comparación del crecimiento en 2021 y esta cifra seguirá en crecimiento en los próximos años.
 
-Por otro lado, hoy en el mundo, hay casi 30 mil establecimientos comerciales que ya aceptan pagos con criptomonedas, negar las criptos como medios de pago, a la larga, hará que los comercios pierden ventas y clientes, es por ello que es necesario que estas se adapten rápidamente y lo pueden lograr con STon.
+Por otro lado, hoy en el mundo, hay casi 30 mil establecimientos comerciales que ya aceptan pagos con criptomonedas, negar las criptos como medios de pago, a la larga, hará que los comercios pierden ventas y clientes, es por ello que es necesario que estas se adapten rápidamente y lo pueden lograr con [STON](https://ston.vercel.app/).
 
 ### `npm start`
 
