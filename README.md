@@ -12,7 +12,7 @@ Para lograr la masificación en las transacciones con criptomonedas quitando de 
 
 Nuestra solución funciona como el tan conocido YAPE, una transacción para lo cual solo necesitas escanear un código QR para efectuar un pago.
 
-La app se encarga de crear contratos inteligentes que pueden recibir depósitos de criptomonedas volátiles para luego convertirlas en criptomonedas estables de forma automática. STon ha sido desarrollada con la red de Binance y va dirigida a empresas que of|recen bienes y servicios de consumo masivo y ventas al por menor
+La app se encarga de crear contratos inteligentes que pueden recibir depósitos de criptomonedas volátiles para luego convertirlas en criptomonedas estables de forma automática. [STON](https://ston.vercel.app/) ha sido desarrollada con la red de Binance y va dirigida a empresas que of|recen bienes y servicios de consumo masivo y ventas al por menor
 
 Lo que diferencia a nuestra aplicación de otras existentes en la actualidad es la accesibilidad de los negocios al producto de una forma rápida, con una tasa de cobro mínima por transacción y con un enfoque descentralizado.
 
