@@ -1,5 +1,5 @@
 # **STON** is [STON](https://ston.vercel.app/).
-![The San Juan Mountains are beautiful!](/src/assets/img/logo.png")
+![The San Juan Mountains are beautiful!](./src/assets/img/logo.png")
 
 ## ANTECEDENTES 
 
